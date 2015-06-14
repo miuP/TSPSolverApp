@@ -13,6 +13,9 @@
 		49BAA9751B159EE1006B9368 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA9741B159EE1006B9368 /* Images.xcassets */; };
 		49BAA9781B159EE1006B9368 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA9761B159EE1006B9368 /* LaunchScreen.xib */; };
 		49BAA9841B159EE1006B9368 /* TSPSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA9831B159EE1006B9368 /* TSPSolverTests.swift */; };
+		49BAA9911B15A4F9006B9368 /* TSPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA9901B15A4F9006B9368 /* TSPView.swift */; };
+		49BAA9931B15AC12006B9368 /* TSPSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA9921B15AC12006B9368 /* TSPSolver.swift */; };
+		49BAA9951B15BD73006B9368 /* TSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA9941B15BD73006B9368 /* TSP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		49BAA97D1B159EE1006B9368 /* TSPSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSPSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA9821B159EE1006B9368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49BAA9831B159EE1006B9368 /* TSPSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSPSolverTests.swift; sourceTree = "<group>"; };
+		49BAA9901B15A4F9006B9368 /* TSPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSPView.swift; sourceTree = "<group>"; };
+		49BAA9921B15AC12006B9368 /* TSPSolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSPSolver.swift; sourceTree = "<group>"; };
+		49BAA9941B15BD73006B9368 /* TSP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				49BAA96D1B159EE1006B9368 /* AppDelegate.swift */,
-				49BAA96F1B159EE1006B9368 /* ViewController.swift */,
-				49BAA9711B159EE1006B9368 /* Main.storyboard */,
+				49BAA98F1B15A4D2006B9368 /* Controller */,
+				49BAA98E1B15A4CD006B9368 /* View */,
+				49BAA98D1B15A4C2006B9368 /* Model */,
 				49BAA9741B159EE1006B9368 /* Images.xcassets */,
 				49BAA9761B159EE1006B9368 /* LaunchScreen.xib */,
 				49BAA96B1B159EE1006B9368 /* Supporting Files */,
@@ -110,6 +117,32 @@
 				49BAA9821B159EE1006B9368 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49BAA98D1B15A4C2006B9368 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49BAA9921B15AC12006B9368 /* TSPSolver.swift */,
+				49BAA9941B15BD73006B9368 /* TSP.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		49BAA98E1B15A4CD006B9368 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49BAA9711B159EE1006B9368 /* Main.storyboard */,
+				49BAA9901B15A4F9006B9368 /* TSPView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		49BAA98F1B15A4D2006B9368 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49BAA96F1B159EE1006B9368 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +189,7 @@
 		49BAA9601B159EE1006B9368 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = KazuyaMIURA;
 				TargetAttributes = {
@@ -212,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BAA9931B15AC12006B9368 /* TSPSolver.swift in Sources */,
 				49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */,
+				49BAA9911B15A4F9006B9368 /* TSPView.swift in Sources */,
+				49BAA9951B15BD73006B9368 /* TSP.swift in Sources */,
 				49BAA96E1B159EE1006B9368 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +448,7 @@
 				49BAA9891B159EE1006B9368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49BAA98A1B159EE1006B9368 /* Build configuration list for PBXNativeTarget "TSPSolverTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +457,7 @@
 				49BAA98C1B159EE1006B9368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
