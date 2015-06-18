@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4911F8811B3254C000EB09A4 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4911F8801B3254C000EB09A4 /* test.txt */; };
+		49A9470E1B32712F006852C3 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9470D1B32712F006852C3 /* DynamicProgramming.swift */; };
 		49BAA96E1B159EE1006B9368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96D1B159EE1006B9368 /* AppDelegate.swift */; };
 		49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96F1B159EE1006B9368 /* ViewController.swift */; };
 		49BAA9731B159EE1006B9368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA9711B159EE1006B9368 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		4911F8801B3254C000EB09A4 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		49A9470D1B32712F006852C3 /* DynamicProgramming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		49BAA9681B159EE1006B9368 /* TSPSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSPSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA96C1B159EE1006B9368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49BAA96D1B159EE1006B9368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				49BAA9921B15AC12006B9368 /* TSPSolver.swift */,
 				49BAA9941B15BD73006B9368 /* TSP.swift */,
+				49A9470D1B32712F006852C3 /* DynamicProgramming.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BAA9931B15AC12006B9368 /* TSPSolver.swift in Sources */,
+				49A9470E1B32712F006852C3 /* DynamicProgramming.swift in Sources */,
 				49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */,
 				49BAA9911B15A4F9006B9368 /* TSPView.swift in Sources */,
 				49BAA9951B15BD73006B9368 /* TSP.swift in Sources */,
