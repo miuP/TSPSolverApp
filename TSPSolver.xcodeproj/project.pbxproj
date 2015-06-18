@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4911F8811B3254C000EB09A4 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4911F8801B3254C000EB09A4 /* test.txt */; };
 		49BAA96E1B159EE1006B9368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96D1B159EE1006B9368 /* AppDelegate.swift */; };
 		49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96F1B159EE1006B9368 /* ViewController.swift */; };
 		49BAA9731B159EE1006B9368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA9711B159EE1006B9368 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4911F8801B3254C000EB09A4 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		49BAA9681B159EE1006B9368 /* TSPSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSPSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA96C1B159EE1006B9368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49BAA96D1B159EE1006B9368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4911F87F1B32547100EB09A4 /* questions */ = {
+			isa = PBXGroup;
+			children = (
+				4911F8801B3254C000EB09A4 /* test.txt */,
+			);
+			name = questions;
+			sourceTree = "<group>";
+		};
 		49BAA95F1B159EE1006B9368 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		49BAA96A1B159EE1006B9368 /* TSPSolver */ = {
 			isa = PBXGroup;
 			children = (
+				4911F87F1B32547100EB09A4 /* questions */,
 				49BAA96D1B159EE1006B9368 /* AppDelegate.swift */,
 				49BAA98F1B15A4D2006B9368 /* Controller */,
 				49BAA98E1B15A4CD006B9368 /* View */,
@@ -228,6 +239,7 @@
 			files = (
 				49BAA9731B159EE1006B9368 /* Main.storyboard in Resources */,
 				49BAA9781B159EE1006B9368 /* LaunchScreen.xib in Resources */,
+				4911F8811B3254C000EB09A4 /* test.txt in Resources */,
 				49BAA9751B159EE1006B9368 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

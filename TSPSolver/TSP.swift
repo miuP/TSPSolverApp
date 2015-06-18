@@ -30,7 +30,22 @@ struct Answer {
 class TSP {
     let cities: [Point]
 
-    init(cities: [Point]) {
-        self.cities = cities
+    init(fileName: String) {
+        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt")
+        let tspTextData = path.flatMap { String(contentsOfFile: $0, encoding: NSUTF8StringEncoding, error: nil) }
+        cities = TSP.makeTSPCitiesData(tspTextData)
     }
+
+    class func makeTSPCitiesData(textData: String?) -> [Point] {
+        let datas = textData.map { split($0) { contains("\n", $0) } }
+        var citiesData: [Point] = []
+        datas.map { (datas) -> Void in
+            for data: String in datas {
+                let pointString = split(data) { contains(",", $0) }
+                citiesData.append(Point(x: (pointString[0] as NSString).doubleValue, y: (pointString[1] as NSString).doubleValue))
+            }
+        }
+        return citiesData
+    }
+
 }
