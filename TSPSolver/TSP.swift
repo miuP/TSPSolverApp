@@ -18,15 +18,6 @@ struct Point {
     }
 }
 
-struct Answer {
-    let route: [Int]
-    let distance: Double
-    init(route: [Int], distance: Double) {
-        self.route = route
-        self.distance = distance
-    }
-}
-
 class TSP {
     let cities: [Point]
 
