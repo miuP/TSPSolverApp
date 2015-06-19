@@ -10,9 +10,9 @@ import UIKit
 
 
 struct Point {
-    let x: Double
-    let y: Double
-    init(x: Double, y:Double) {
+    let x: Int
+    let y: Int
+    init(x: Int, y:Int) {
         self.x = x
         self.y = y
     }
@@ -33,7 +33,7 @@ class TSP {
         datas.map { (datas) -> Void in
             for data: String in datas {
                 let pointString = split(data) { contains(",", $0) }
-                citiesData.append(Point(x: (pointString[0] as NSString).doubleValue, y: (pointString[1] as NSString).doubleValue))
+                citiesData.append(Point(x: (pointString[0] as NSString).integerValue, y: (pointString[1] as NSString).integerValue))
             }
         }
         return citiesData

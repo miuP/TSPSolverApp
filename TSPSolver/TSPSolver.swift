@@ -10,8 +10,8 @@ import Foundation
 
 struct Answer {
     let route: [Int]
-    let distance: Double
-    init(route: [Int], distance: Double) {
+    let distance: Int
+    init(route: [Int], distance: Int) {
         self.route = route
         self.distance = distance
     }
@@ -22,8 +22,8 @@ class TSPSolver {
         fatalError("must overwritten")
     }
 
-    func getEuclideanDistance(P: Point, Q: Point) -> Double {
-        return sqrt(P.x * Q.x + P.y * Q.y)
+    func getEuclideanDistance(P: Point, Q: Point) -> Int {
+        return Int(sqrt(Double(P.x * Q.x + P.y * Q.y)))
     }
 
 }
