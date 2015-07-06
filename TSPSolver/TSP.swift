@@ -18,6 +18,15 @@ struct Point {
     }
 }
 
+struct Node {
+    let coordinates: Point
+    let number: Int
+    init(coordinates: Point, number: Int) {
+        self.coordinates = coordinates
+        self.number      = number
+    }
+}
+
 class TSP {
     let cities: [Point]
 
