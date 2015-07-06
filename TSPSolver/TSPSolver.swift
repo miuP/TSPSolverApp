@@ -6,6 +6,25 @@
 //  Copyright (c) 2015 KazuyaMIURA. All rights reserved.
 //
 
-protocol TSPSolver {
-    func solve(question: TSP) -> Answer
+import Foundation
+
+struct Answer {
+    let route: [Int]
+    let distance: Double
+    init(route: [Int], distance: Double) {
+        self.route = route
+        self.distance = distance
+    }
 }
+
+class TSPSolver {
+    func solve(question: TSP) -> Answer {
+        fatalError("must overwritten")
+    }
+
+    func getEuclideanDistance(P: Point, Q: Point) -> Double {
+        return sqrt(Double(P.x * Q.x + P.y * Q.y))
+    }
+
+}
+
