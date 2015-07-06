@@ -10,9 +10,9 @@ import UIKit
 
 
 struct Point {
-    let x: Int
-    let y: Int
-    init(x: Int, y:Int) {
+    let x: Double
+    let y: Double
+    init(x: Double, y:Double) {
         self.x = x
         self.y = y
     }
@@ -28,7 +28,7 @@ struct Node {
 }
 
 class TSP {
-    let cities: [Point]
+    let cities: [Node]
 
     init(fileName: String) {
         let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt")
@@ -36,13 +36,14 @@ class TSP {
         cities = TSP.makeTSPCitiesData(tspTextData)
     }
 
-    class func makeTSPCitiesData(textData: String?) -> [Point] {
+    class func makeTSPCitiesData(textData: String?) -> [Node] {
         let datas = textData.map { split($0) { contains("\n", $0) } }
-        var citiesData: [Point] = []
+        var citiesData: [Node] = []
         datas.map { (datas) -> Void in
             for data: String in datas {
-                let pointString = split(data) { contains(",", $0) }
-                citiesData.append(Point(x: (pointString[0] as NSString).integerValue, y: (pointString[1] as NSString).integerValue))
+                let nodeData = split(data) { contains(",", $0) }
+                let coordinates = Point(x: (nodeData[1] as NSString).doubleValue, y: (nodeData[2] as NSString).doubleValue)
+                citiesData.append(Node(coordinates: coordinates, number: (nodeData[0] as NSString).integerValue))
             }
         }
         return citiesData

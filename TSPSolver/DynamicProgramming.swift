@@ -10,7 +10,7 @@ import UIKit
 
 class DynamicProgramming: TSPSolver {
     override func solve(question: TSP) -> Answer {
-        var f: [[Int]] = [[]]
+        var f: [[Double]] = [[]]
         let SMAX = 1 << question.cities.count
         let n = question.cities.count
 
@@ -21,7 +21,7 @@ class DynamicProgramming: TSPSolver {
         }
 
         for (var i = 0; i < n - 1; i++) {
-            f[i][1 << i] = getEuclideanDistance(question.cities[n - 1], Q: question.cities[i])
+            f[i][1 << i] = getEuclideanDistance(question.cities[n - 1].coordinates, Q: question.cities[i].coordinates)
         }
 
         for (var S = 1; S < SMAX; S++) {
@@ -29,7 +29,7 @@ class DynamicProgramming: TSPSolver {
                 if ((1 << i) & S) == 0 {continue}
                 for (var j = 0; j < n; j++) {
                     if (( 1 << j) & S) == 0 {continue}
-                    let tmp = f[i][S] + getEuclideanDistance(question.cities[i], Q: question.cities[j])
+                    let tmp = f[i][S] + getEuclideanDistance(question.cities[i].coordinates, Q: question.cities[j].coordinates)
                     if (tmp < f[j][S | (1 << j)]) {
                         f[j][S | (1 << j)] = tmp
                     }
