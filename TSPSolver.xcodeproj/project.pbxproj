@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4911F8811B3254C000EB09A4 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4911F8801B3254C000EB09A4 /* test.txt */; };
+		49716E9B1B4A2540003BBCFB /* TSPVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49716E9A1B4A2540003BBCFB /* TSPVisualizer.swift */; };
+		497752C01B4A86D300BE74AA /* TSPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497752BF1B4A86D300BE74AA /* TSPController.swift */; };
 		49A9470E1B32712F006852C3 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9470D1B32712F006852C3 /* DynamicProgramming.swift */; };
 		49BAA96E1B159EE1006B9368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96D1B159EE1006B9368 /* AppDelegate.swift */; };
 		49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96F1B159EE1006B9368 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		4911F8801B3254C000EB09A4 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		49716E9A1B4A2540003BBCFB /* TSPVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSPVisualizer.swift; sourceTree = "<group>"; };
+		497752BF1B4A86D300BE74AA /* TSPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSPController.swift; sourceTree = "<group>"; };
 		49A9470D1B32712F006852C3 /* DynamicProgramming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		49BAA9681B159EE1006B9368 /* TSPSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSPSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA96C1B159EE1006B9368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			children = (
 				49BAA9711B159EE1006B9368 /* Main.storyboard */,
 				49BAA9901B15A4F9006B9368 /* TSPView.swift */,
+				49716E9A1B4A2540003BBCFB /* TSPVisualizer.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				49BAA96F1B159EE1006B9368 /* ViewController.swift */,
+				497752BF1B4A86D300BE74AA /* TSPController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BAA9931B15AC12006B9368 /* TSPSolver.swift in Sources */,
+				497752C01B4A86D300BE74AA /* TSPController.swift in Sources */,
 				49A9470E1B32712F006852C3 /* DynamicProgramming.swift in Sources */,
 				49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */,
+				49716E9B1B4A2540003BBCFB /* TSPVisualizer.swift in Sources */,
 				49BAA9911B15A4F9006B9368 /* TSPView.swift in Sources */,
 				49BAA9951B15BD73006B9368 /* TSP.swift in Sources */,
 				49BAA96E1B159EE1006B9368 /* AppDelegate.swift in Sources */,
