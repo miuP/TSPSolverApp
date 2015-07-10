@@ -10,8 +10,20 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+
+    var visualizer: TSPVisualizer?
+
+    @IBOutlet weak var mainView: UIView!
+
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tspView = TSPView(frame: mainView.bounds)
+        mainView.addSubview(tspView)
+        visualizer = TSPVisualizer(view: tspView)
+        visualizer?.drawNodesByTSP(TSP(fileName: "test"))
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

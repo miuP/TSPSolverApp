@@ -10,8 +10,14 @@ import UIKit
 
 class TSPView: UIView {
 
+    let nodesImageView: UIImageView
+
     override init(frame: CGRect) {
+        nodesImageView = UIImageView(frame: frame)
         super.init(frame: frame)
+
+
+        self.addSubview(nodesImageView)
     }
 
     required init(coder aDecoder: NSCoder) {

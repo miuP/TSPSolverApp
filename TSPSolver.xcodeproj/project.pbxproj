@@ -150,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				49BAA9711B159EE1006B9368 /* Main.storyboard */,
-				49BAA9901B15A4F9006B9368 /* TSPView.swift */,
 				49716E9A1B4A2540003BBCFB /* TSPVisualizer.swift */,
+				49BAA9901B15A4F9006B9368 /* TSPView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

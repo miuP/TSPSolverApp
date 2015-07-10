@@ -9,7 +9,12 @@
 import UIKit
 
 class TSPController {
-    
+    //TODO: 解法をENUMで定義
+    enum TSPSolverType {
+        case DP
+        case NN
+        case AC
+    }
 
 
 }
