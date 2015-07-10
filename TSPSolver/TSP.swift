@@ -16,6 +16,11 @@ struct Point {
         self.x = x
         self.y = y
     }
+
+    func description() {
+        println("{\(x), \(y)}")
+    }
+
 }
 
 struct Node {

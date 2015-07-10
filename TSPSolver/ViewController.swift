@@ -23,7 +23,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let tspView = TSPView(frame: mainView.bounds)
         mainView.addSubview(tspView)
         visualizer = TSPVisualizer(view: tspView)
-        visualizer?.drawNodesByTSP(TSP(fileName: "test"))
+        let tsp = TSP(fileName: "test")
+        visualizer?.drawNodesByTSP(tsp)
+        visualizer?.drawAnser(Answer(route: [1,2,3,4,1], distance: 0), withTSP: tsp)
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
