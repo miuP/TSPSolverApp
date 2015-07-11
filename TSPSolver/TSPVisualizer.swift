@@ -68,7 +68,6 @@ class TSPVisualizer {
         CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor);
         for (var i = 0; i < count(tsp.cities); i++) {
             let aPoint = fixCoordinatesForTSPViewScale(tsp.cities[i].coordinates)
-            aPoint.description()
             CGContextFillEllipseInRect(context, CGRectMake(CGFloat(aPoint.x) - radius, CGFloat(aPoint.y) - radius, 2 * radius, 2 * radius))
         }
 

@@ -25,7 +25,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         visualizer = TSPVisualizer(view: tspView)
         let tsp = TSP(fileName: "test")
         visualizer?.drawNodesByTSP(tsp)
-        visualizer?.drawAnser(Answer(route: [1,2,3,4,1], distance: 0), withTSP: tsp)
+        visualizer?.drawAnser(DynamicProgramming().solve(tsp), withTSP: tsp)
+
+        let route = [7,
+            13,
+            8,
+            11,
+            9,
+            10,
+            1,
+            2,
+            14,
+            3,
+            4,
+            5,
+            6,
+            12]
+        println(TSPSolver.d(route, tsp: tsp))
+
+
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
