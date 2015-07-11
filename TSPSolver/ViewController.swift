@@ -23,29 +23,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let tspView = TSPView(frame: mainView.bounds)
         mainView.addSubview(tspView)
         visualizer = TSPVisualizer(view: tspView)
-        let tsp = TSP(fileName: "test")
-        visualizer?.drawNodesByTSP(tsp)
-        visualizer?.drawAnser(DynamicProgramming().solve(tsp), withTSP: tsp)
-
-        let route = [7,
-            13,
-            8,
-            11,
-            9,
-            10,
-            1,
-            2,
-            14,
-            3,
-            4,
-            5,
-            6,
-            12]
-        println(TSPSolver.d(route, tsp: tsp))
-
-
     }
 
+    @IBAction func solveButtonTouchUpInside(sender: UIButton) {
+        let tsp = TSP(fileName: "test")
+        visualizer?.drawNodesByTSP(tsp)
+        visualizer?.drawAnser(NearestNeighbor(tsp: tsp).solve(tsp), withTSP: tsp)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return UITableViewCell()
     }

@@ -44,6 +44,7 @@ class DynamicProgramming: TSPSolver {
                     let tmp = f[i][S].0 + getEuclideanDistance(question.cities[i].coordinates, Q: question.cities[j].coordinates)
                     if (tmp < f[j][(S | (1 << j))].0) {
                         f[j][(S | (1 << j))] = (tmp, j + 1)
+                        route[i + 1] = j + 1
                     }
                 }
             }

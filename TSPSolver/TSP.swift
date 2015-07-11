@@ -34,11 +34,13 @@ struct Node {
 
 class TSP {
     let cities: [Node]
+    
 
     init(fileName: String) {
         let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt")
         let tspTextData = path.flatMap { String(contentsOfFile: $0, encoding: NSUTF8StringEncoding, error: nil) }
         cities = TSP.makeTSPCitiesData(tspTextData)
+        
     }
 
     class func makeTSPCitiesData(textData: String?) -> [Node] {
