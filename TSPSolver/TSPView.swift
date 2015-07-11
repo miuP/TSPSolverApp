@@ -10,8 +10,17 @@ import UIKit
 
 class TSPView: UIView {
 
+    let nodesImageView: UIImageView
+    let tourImageView:  UIImageView
+
     override init(frame: CGRect) {
+        nodesImageView = UIImageView(frame: frame)
+        tourImageView  = UIImageView(frame: frame)
         super.init(frame: frame)
+
+
+        self.addSubview(nodesImageView)
+        self.addSubview(tourImageView)
     }
 
     required init(coder aDecoder: NSCoder) {

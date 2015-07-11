@@ -12,10 +12,15 @@ import UIKit
 struct Point {
     let x: Double
     let y: Double
-    init(x: Double, y:Double) {
+    init(x: Double, y: Double) {
         self.x = x
         self.y = y
     }
+
+    func description() {
+        println("{\(x), \(y)}")
+    }
+
 }
 
 struct Node {
@@ -41,7 +46,7 @@ class TSP {
         var citiesData: [Node] = []
         datas.map { (datas) -> Void in
             for data: String in datas {
-                let nodeData = split(data) { contains(",", $0) }
+                let nodeData = split(data) { contains(" ", $0) }
                 let coordinates = Point(x: (nodeData[1] as NSString).doubleValue, y: (nodeData[2] as NSString).doubleValue)
                 citiesData.append(Node(coordinates: coordinates, number: (nodeData[0] as NSString).integerValue))
             }
