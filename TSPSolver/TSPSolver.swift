@@ -68,8 +68,7 @@ class TSPSolver {
             for (var i = 0; i < n - 1; i++) {
                 for (var j = i + 1; j < n; j++) {
                     let newDistance = length2Opt(newAnswer, i: i, j: j)
-                    if (Int(newDistance * 10000) < Int(newAnswer.distance * 10000)) {
-                        println("update:\n\(newAnswer.route) to \n\(swap2Opt(newAnswer, i: i, j: j))")
+                    if (Int(newDistance * 100000) < Int(newAnswer.distance * 100000)) {
                         if newAnswer.route != swap2Opt(newAnswer, i: i, j: j) {
                             newAnswer = Answer(route: swap2Opt(newAnswer, i: i, j: j), distance: newDistance)
                             improved = true

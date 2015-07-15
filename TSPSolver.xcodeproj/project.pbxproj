@@ -21,6 +21,7 @@
 		49BAA9931B15AC12006B9368 /* TSPSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA9921B15AC12006B9368 /* TSPSolver.swift */; };
 		49BAA9951B15BD73006B9368 /* TSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA9941B15BD73006B9368 /* TSP.swift */; };
 		49D3FAB51B50AC490074D56C /* NearestNeighbor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3FAB41B50AC490074D56C /* NearestNeighbor.swift */; };
+		49D3FAB71B50E8D30074D56C /* AntColonyOptimization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3FAB61B50E8D30074D56C /* AntColonyOptimization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		49BAA9921B15AC12006B9368 /* TSPSolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSPSolver.swift; sourceTree = "<group>"; };
 		49BAA9941B15BD73006B9368 /* TSP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSP.swift; sourceTree = "<group>"; };
 		49D3FAB41B50AC490074D56C /* NearestNeighbor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestNeighbor.swift; sourceTree = "<group>"; };
+		49D3FAB61B50E8D30074D56C /* AntColonyOptimization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntColonyOptimization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				49BAA9941B15BD73006B9368 /* TSP.swift */,
 				49A9470D1B32712F006852C3 /* DynamicProgramming.swift */,
 				49D3FAB41B50AC490074D56C /* NearestNeighbor.swift */,
+				49D3FAB61B50E8D30074D56C /* AntColonyOptimization.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				497752C01B4A86D300BE74AA /* TSPController.swift in Sources */,
 				49A9470E1B32712F006852C3 /* DynamicProgramming.swift in Sources */,
 				49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */,
+				49D3FAB71B50E8D30074D56C /* AntColonyOptimization.swift in Sources */,
 				49716E9B1B4A2540003BBCFB /* TSPVisualizer.swift in Sources */,
 				49BAA9911B15A4F9006B9368 /* TSPView.swift in Sources */,
 				49BAA9951B15BD73006B9368 /* TSP.swift in Sources */,
