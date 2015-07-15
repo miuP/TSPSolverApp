@@ -64,7 +64,7 @@ class TSPVisualizer {
         UIGraphicsBeginImageContextWithOptions((tspView.frame.size), false, 0)
         let context = UIGraphicsGetCurrentContext()
 
-        let radius = self.tspView.frame.width * 0.005
+        let radius = self.tspView.frame.width * 0.003
         CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor);
         for (var i = 0; i < count(tsp.cities); i++) {
             let aPoint = fixCoordinatesForTSPViewScale(tsp.cities[i].coordinates)

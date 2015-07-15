@@ -20,7 +20,6 @@ class NearestNeighbor: TSPSolver {
         var distance: Double = 0.0
         var from = start
         for (var i = 1; i < n; i++) {
-            println(visited)
             let to = searchNotVisetedNearest(from, visited: visited, adjacencyMat: adjacencyMat)
             distance += adjacencyMat[from][to]
             route[i] = to + 1

@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
     var visualizer: TSPVisualizer?
+    var tsp: TSP = TSP(fileName: "test")
 
     @IBOutlet weak var mainView: UIView!
 
@@ -23,12 +24,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let tspView = TSPView(frame: mainView.bounds)
         mainView.addSubview(tspView)
         visualizer = TSPVisualizer(view: tspView)
+        tsp = TSP(fileName: "test")
+        visualizer?.drawNodesByTSP(tsp)
     }
 
     @IBAction func solveButtonTouchUpInside(sender: UIButton) {
-        let tsp = TSP(fileName: "test")
-        visualizer?.drawNodesByTSP(tsp)
-        visualizer?.drawAnser(NearestNeighbor(tsp: tsp).solve(tsp), withTSP: tsp)
+        visualizer?.drawAnser(AntColonyOptimization(tsp: tsp).solve(tsp), withTSP: tsp)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
