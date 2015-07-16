@@ -33,9 +33,7 @@ class TSPSolver {
         adjacencyMat = makeAdjacencyMatrix(tsp.cities)
     }
 
-    func solve(question: TSP) -> Answer {
-        fatalError("must overwritten")
-    }
+    func solve(question: TSP) -> Answer {fatalError("must overwritten")}
 
     func getEuclideanDistance(P: Point, Q: Point) -> Double {
         let dx = Q.x - P.x
@@ -101,5 +99,16 @@ class TSPSolver {
         return newRoute
     }
 
+     func getDistanceByRoute(route: [Int]) -> Double {
+        var prev = route[0] - 1
+        var to   = route[1] - 1
+        var dis  = adjacencyMat[prev][to]
+        for (var i = 1; i < route.count - 1; i++) {
+            prev = to
+            to = route[i + 1] - 1
+            dis += adjacencyMat[prev][to]
+        }
+        return dis
+    }
 }
 

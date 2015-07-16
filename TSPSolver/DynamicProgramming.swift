@@ -10,49 +10,59 @@ import UIKit
 
 class DynamicProgramming: TSPSolver {
 
+    func getRoute(f: [[(Double, Int)]], size: Int, start: Int) -> [Int] {
+        var route = [start + 1]
+        var v = 1 << start
+        var p = start
+        while route.count < size {
+            let (_, q) = f[v][p]
+            route.append(q + 1)
+            v |= (1 << q)
+            p = q
+        }
+        route.append(1)
+        return route
+    }
+
+
     override func solve(question: TSP) -> Answer {
 
-        var route: [Int] = []
-
-        var f: [[(Double, Int)]] = []
-
-        let SMAX = 1 << question.cities.count
         let n = question.cities.count
-        route.append(n)
-        for (var i = 0; i < n; i++) {
-            route.append(0)
-        }
+        let size = n
+        let SMAX = 1 << size
+        var f: [[(Double, Int)]] = Array(count: SMAX, repeatedValue: Array(count: size, repeatedValue: (9999.0, 0)))
 
-        for (var i = 0; i < n; i++) {
-            var column: [(Double, Int)] = [(0, 0)]
-            for (var j = 1; j < SMAX; j++) {
-                let t = (99999.0, 0)
-                column.append(t)
-            }
-            f.append(column)
-        }
+        for (var i = 1; i < size; i++) {f[(1 << size) - 1][i] = (adjacencyMat[i - 1][0], 0)}
 
-        for (var i = 0; i < n - 1; i++) {
-            f[i][1 << i] = (getEuclideanDistance(question.cities[n - 1].coordinates, Q: question.cities[i].coordinates), i + 1)
-        }
-
-        for (var S = 1; S < SMAX; S++) {
-            for (var i = 0; i < n; i++) {
-                if ((1 << i) & S) == 0 {continue}
-                for (var j = 0; j < n; j++) {
-                    if (( 1 << j) & S) != 0 {continue}
-                    let tmp = f[i][S].0 + getEuclideanDistance(question.cities[i].coordinates, Q: question.cities[j].coordinates)
-                    if (tmp < f[j][(S | (1 << j))].0) {
-                        f[j][(S | (1 << j))] = (tmp, j + 1)
-                        route[i + 1] = j + 1
+        for (var v = SMAX - 2; v != 0; v--) {
+            var tmp: [(Double, Int)] = Array(count: size, repeatedValue: (9999.0, 0))
+            for (var i = 0; i < size; i++) {
+                if (1 << i) & v == 0 {continue}
+                var min = (999999.0, 0)
+                for (var j = 0; j < size; j++) {
+                    if (1 << j) & v != 0 {continue}
+                    if min.0 > adjacencyMat[i][j] + f[v | (1 << j)][j].0 {
+                        min = (adjacencyMat[i][j] + f[v | (1 << j)][j].0, j)
                     }
                 }
+                tmp[i] = min
             }
-
+            f[v] = tmp
         }
+
+        var min = 9999999.9
+        var s = 0
+        for (var i = 0; i < size; i++) {
+            if adjacencyMat[i][0] + f[1 << i][i].0 < min {
+                min = adjacencyMat[i][0] + f[1 << i][i].0
+                s = i
+            }
+        }
+
+
+        let route = getRoute(f, size: size, start: s)
         println(route)
-        println(f[n - 1][SMAX - 1])
-        return Answer(route: route, distance: f[n - 1][SMAX - 1].0)
+        return Answer(route: getRoute(f, size: size, start: s), distance: getDistanceByRoute(route))
     }
 
 

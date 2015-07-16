@@ -87,7 +87,7 @@ class TSPVisualizer {
         CGContextSetStrokeColorWithColor(context, UIColor.blueColor().CGColor);
         CGContextMoveToPoint(context, CGFloat(start.x), CGFloat(start.y));
 
-        for (var i = 1; i <= numOfCities; i++) {
+        for (var i = 1; i < answer.route.count; i++) {
             let nodeNumber = answer.route[i];
             if nodeNumber <  1 || nodeNumber > numOfCities { // Tour ends.
                 break;
