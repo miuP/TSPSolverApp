@@ -12,14 +12,16 @@ class TSPView: UIView {
 
     let nodesImageView: UIImageView
     let tourImageView:  UIImageView
+    let correctAnswerImageView: UIImageView
 
     override init(frame: CGRect) {
         nodesImageView = UIImageView(frame: frame)
         tourImageView  = UIImageView(frame: frame)
+        correctAnswerImageView = UIImageView(frame: frame)
         super.init(frame: frame)
 
-
         self.addSubview(nodesImageView)
+        self.addSubview(correctAnswerImageView)
         self.addSubview(tourImageView)
     }
 

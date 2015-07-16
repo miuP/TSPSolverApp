@@ -103,6 +103,32 @@ class TSPVisualizer {
 
     }
 
+    func drawCorrectAnswer(answer: Answer, withTSP tsp: TSP) {
+        UIGraphicsBeginImageContextWithOptions(tspView.frame.size, false, 0);
+        let context = UIGraphicsGetCurrentContext();
+
+        let start = fixCoordinatesForTSPViewScale(tsp.cities[answer.route[0] - 1].coordinates)
+        let numOfCities = count(tsp.cities)
+
+        CGContextSetLineWidth(context, tspView.frame.width * CGFloat(lineWidthScale)*3);
+        CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor);
+        CGContextMoveToPoint(context, CGFloat(start.x), CGFloat(start.y));
+
+        for (var i = 1; i < answer.route.count; i++) {
+            let nodeNumber = answer.route[i];
+            if nodeNumber <  1 || nodeNumber > numOfCities { // Tour ends.
+                break;
+            }
+            let aPoint = fixCoordinatesForTSPViewScale(tsp.cities[nodeNumber - 1].coordinates);
+            CGContextAddLineToPoint(context, CGFloat(aPoint.x), CGFloat(aPoint.y));
+            CGContextStrokePath(context);
+            CGContextMoveToPoint(context, CGFloat(aPoint.x), CGFloat(aPoint.y));
+        }
+
+        tspView.correctAnswerImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+    }
+
 
 
 }

@@ -19,21 +19,22 @@ struct Answer {
 
 class TSPSolver {
 
-    enum TSPSolverType {
-        case DP
-        case NN
-        case AC
+    enum TSPSolverType: String {
+        case DynamicProgramming = "DynamicProgramming"
+        case NearestNeighbor    = "NearestNeighbor"
+        case AntColonyOptimization = "AntColonyOptimization"
     }
 
     var adjacencyMat: [[Double]]
-
+    let tsp: TSP
 
     init(tsp: TSP) {
+        self.tsp = tsp
         adjacencyMat = [[]]
         adjacencyMat = makeAdjacencyMatrix(tsp.cities)
     }
 
-    func solve(question: TSP) -> Answer {fatalError("must overwritten")}
+    func solve() -> Answer {fatalError("must overwritten")}
 
     func getEuclideanDistance(P: Point, Q: Point) -> Double {
         let dx = Q.x - P.x

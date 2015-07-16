@@ -25,9 +25,9 @@ class DynamicProgramming: TSPSolver {
     }
 
 
-    override func solve(question: TSP) -> Answer {
+    override func solve() -> Answer {
 
-        let n = question.cities.count
+        let n = tsp.cities.count
         let size = n
         let SMAX = 1 << size
         var f: [[(Double, Int)]] = Array(count: SMAX, repeatedValue: Array(count: size, repeatedValue: (9999.0, 0)))

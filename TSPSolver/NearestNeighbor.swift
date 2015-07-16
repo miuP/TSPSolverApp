@@ -9,8 +9,8 @@
 import UIKit
 
 class NearestNeighbor: TSPSolver {
-    override func solve(question: TSP) -> Answer {
-        let n = question.cities.count
+    override func solve() -> Answer {
+        let n = tsp.cities.count
         var route: [Int] = Array(count: n, repeatedValue: 0)
         var visited: [Bool] = Array(count: n, repeatedValue: false)
         

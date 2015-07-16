@@ -119,7 +119,7 @@ class AntColonyOptimization: TSPSolver {
 
     var numOfAnt = 25
     let P: Double = 0.1
-    let MAX_ITER = 32
+    let MAX_ITER = 100
 
     let ALPHA = 1.0
     let BETA = 5.0
@@ -184,10 +184,10 @@ class AntColonyOptimization: TSPSolver {
         return bestAnt!
     }
 
-    override func solve(question: TSP) -> Answer {
+    override func solve() -> Answer {
 
-        var field = Field(cities: question.cities, dists: adjacencyMat, pheros: initPheromoneMat(P, n: question.cities.count))
-        numOfAnt = question.cities.count
+        var field = Field(cities: tsp.cities, dists: adjacencyMat, pheros: initPheromoneMat(P, n: tsp.cities.count))
+        numOfAnt = tsp.cities.count
         let ants = getAnts(field)
 
 
@@ -195,11 +195,6 @@ class AntColonyOptimization: TSPSolver {
         let twoOptAnswer = improvementAnswerBy2Opt(Answer(route: bestAnt.route, distance: bestAnt.tourLen))
 
         return twoOptAnswer
-
-
-
-
-
     }
 
     private func initPheromoneMat(pheromone: Double, n: Int) -> [[Double]] {
