@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var solverTypeLabel: UILabel!
 
-    let tspTitles = ["bayg29", "eil51"]
+    let tspTitles = ["bayg29", "eil51", "a280", "bays29", "burma14"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

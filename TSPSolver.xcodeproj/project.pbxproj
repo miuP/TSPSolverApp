@@ -12,6 +12,12 @@
 		49A3E8B21B579578000C88FB /* bayg29.tsp in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8B01B579578000C88FB /* bayg29.tsp */; };
 		49A3E8B51B57A006000C88FB /* eil51.opt.tour in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8B31B57A006000C88FB /* eil51.opt.tour */; };
 		49A3E8B61B57A006000C88FB /* eil51.tsp in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8B41B57A006000C88FB /* eil51.tsp */; };
+		49A3E8BD1B57AEFB000C88FB /* a280.opt.tour in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8BB1B57AEFB000C88FB /* a280.opt.tour */; };
+		49A3E8BE1B57AEFB000C88FB /* a280.tsp in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8BC1B57AEFB000C88FB /* a280.tsp */; };
+		49A3E8C11B57AF55000C88FB /* bays29.opt.tour in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8BF1B57AF55000C88FB /* bays29.opt.tour */; };
+		49A3E8C21B57AF55000C88FB /* bays29.tsp in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8C01B57AF55000C88FB /* bays29.tsp */; };
+		49A3E8C41B57AFAB000C88FB /* burma14.tsp in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8C31B57AFAB000C88FB /* burma14.tsp */; };
+		49A3E8C61B57AFB9000C88FB /* burma14.opt.tour in Resources */ = {isa = PBXBuildFile; fileRef = 49A3E8C51B57AFB9000C88FB /* burma14.opt.tour */; };
 		49A9470E1B32712F006852C3 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9470D1B32712F006852C3 /* DynamicProgramming.swift */; };
 		49BAA96E1B159EE1006B9368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96D1B159EE1006B9368 /* AppDelegate.swift */; };
 		49BAA9701B159EE1006B9368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA96F1B159EE1006B9368 /* ViewController.swift */; };
@@ -42,6 +48,12 @@
 		49A3E8B01B579578000C88FB /* bayg29.tsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bayg29.tsp; sourceTree = "<group>"; };
 		49A3E8B31B57A006000C88FB /* eil51.opt.tour */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eil51.opt.tour; sourceTree = "<group>"; };
 		49A3E8B41B57A006000C88FB /* eil51.tsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eil51.tsp; sourceTree = "<group>"; };
+		49A3E8BB1B57AEFB000C88FB /* a280.opt.tour */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a280.opt.tour; sourceTree = "<group>"; };
+		49A3E8BC1B57AEFB000C88FB /* a280.tsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a280.tsp; sourceTree = "<group>"; };
+		49A3E8BF1B57AF55000C88FB /* bays29.opt.tour */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bays29.opt.tour; sourceTree = "<group>"; };
+		49A3E8C01B57AF55000C88FB /* bays29.tsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bays29.tsp; sourceTree = "<group>"; };
+		49A3E8C31B57AFAB000C88FB /* burma14.tsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = burma14.tsp; sourceTree = "<group>"; };
+		49A3E8C51B57AFB9000C88FB /* burma14.opt.tour */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = burma14.opt.tour; sourceTree = "<group>"; };
 		49A9470D1B32712F006852C3 /* DynamicProgramming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		49BAA9681B159EE1006B9368 /* TSPSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSPSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA96C1B159EE1006B9368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,10 +93,16 @@
 		4911F87F1B32547100EB09A4 /* questions */ = {
 			isa = PBXGroup;
 			children = (
+				49A3E8BB1B57AEFB000C88FB /* a280.opt.tour */,
+				49A3E8C31B57AFAB000C88FB /* burma14.tsp */,
+				49A3E8C51B57AFB9000C88FB /* burma14.opt.tour */,
+				49A3E8BC1B57AEFB000C88FB /* a280.tsp */,
 				49A3E8AF1B579578000C88FB /* bayg29.opt.tour */,
 				49A3E8B01B579578000C88FB /* bayg29.tsp */,
 				49A3E8B31B57A006000C88FB /* eil51.opt.tour */,
 				49A3E8B41B57A006000C88FB /* eil51.tsp */,
+				49A3E8BF1B57AF55000C88FB /* bays29.opt.tour */,
+				49A3E8C01B57AF55000C88FB /* bays29.tsp */,
 			);
 			name = questions;
 			sourceTree = "<group>";
@@ -258,11 +276,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A3E8C11B57AF55000C88FB /* bays29.opt.tour in Resources */,
 				49A3E8B11B579578000C88FB /* bayg29.opt.tour in Resources */,
+				49A3E8C21B57AF55000C88FB /* bays29.tsp in Resources */,
+				49A3E8BD1B57AEFB000C88FB /* a280.opt.tour in Resources */,
+				49A3E8C61B57AFB9000C88FB /* burma14.opt.tour in Resources */,
 				49A3E8B51B57A006000C88FB /* eil51.opt.tour in Resources */,
 				49A3E8B21B579578000C88FB /* bayg29.tsp in Resources */,
 				49BAA9731B159EE1006B9368 /* Main.storyboard in Resources */,
 				49A3E8B61B57A006000C88FB /* eil51.tsp in Resources */,
+				49A3E8C41B57AFAB000C88FB /* burma14.tsp in Resources */,
+				49A3E8BE1B57AEFB000C88FB /* a280.tsp in Resources */,
 				49BAA9781B159EE1006B9368 /* LaunchScreen.xib in Resources */,
 				49BAA9751B159EE1006B9368 /* Images.xcassets in Resources */,
 			);
