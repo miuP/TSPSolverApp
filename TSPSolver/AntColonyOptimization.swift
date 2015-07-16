@@ -194,7 +194,7 @@ class AntColonyOptimization: TSPSolver {
         var bestAnt = start(field, ants: ants)
         let twoOptAnswer = improvementAnswerBy2Opt(Answer(route: bestAnt.route, distance: bestAnt.tourLen))
 
-        return Answer(route: bestAnt.route, distance: bestAnt.tourLen)
+        return twoOptAnswer
 
 
 

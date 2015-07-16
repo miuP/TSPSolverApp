@@ -29,7 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @IBAction func solveButtonTouchUpInside(sender: UIButton) {
-        visualizer?.drawAnser(AntColonyOptimization(tsp: tsp).solve(tsp), withTSP: tsp)
+        visualizer?.drawAnser(DynamicProgramming(tsp: tsp).solve(tsp), withTSP: tsp)
+
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
