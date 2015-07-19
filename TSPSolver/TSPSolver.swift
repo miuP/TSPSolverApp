@@ -49,7 +49,6 @@ class TSPSolver {
         for (var i = 0; i < cities.count; i++) {
             var column: [Double] = []
             for (var j = 0; j < cities.count; j++) {
-                if i == 0 && j == 0 {println()}
                 column.append(getEuclideanDistance(cities[i].coordinates, Q: cities[j].coordinates))
             }
             adjacencyMat.append(column)

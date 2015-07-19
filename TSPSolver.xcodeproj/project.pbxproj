@@ -30,6 +30,8 @@
 		49BAA9951B15BD73006B9368 /* TSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA9941B15BD73006B9368 /* TSP.swift */; };
 		49D3FAB51B50AC490074D56C /* NearestNeighbor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3FAB41B50AC490074D56C /* NearestNeighbor.swift */; };
 		49D3FAB71B50E8D30074D56C /* AntColonyOptimization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3FAB61B50E8D30074D56C /* AntColonyOptimization.swift */; };
+		49DBEDA11B57DB4300046B67 /* tsp225.opt.tour in Resources */ = {isa = PBXBuildFile; fileRef = 49DBED9F1B57DB4300046B67 /* tsp225.opt.tour */; };
+		49DBEDA21B57DB4300046B67 /* tsp225.tsp in Resources */ = {isa = PBXBuildFile; fileRef = 49DBEDA01B57DB4300046B67 /* tsp225.tsp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		49BAA9941B15BD73006B9368 /* TSP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSP.swift; sourceTree = "<group>"; };
 		49D3FAB41B50AC490074D56C /* NearestNeighbor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestNeighbor.swift; sourceTree = "<group>"; };
 		49D3FAB61B50E8D30074D56C /* AntColonyOptimization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntColonyOptimization.swift; sourceTree = "<group>"; };
+		49DBED9F1B57DB4300046B67 /* tsp225.opt.tour */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tsp225.opt.tour; sourceTree = "<group>"; };
+		49DBEDA01B57DB4300046B67 /* tsp225.tsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tsp225.tsp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		4911F87F1B32547100EB09A4 /* questions */ = {
 			isa = PBXGroup;
 			children = (
+				49DBED9F1B57DB4300046B67 /* tsp225.opt.tour */,
+				49DBEDA01B57DB4300046B67 /* tsp225.tsp */,
 				49A3E8BB1B57AEFB000C88FB /* a280.opt.tour */,
 				49A3E8C31B57AFAB000C88FB /* burma14.tsp */,
 				49A3E8C51B57AFB9000C88FB /* burma14.opt.tour */,
@@ -280,6 +286,7 @@
 				49A3E8B11B579578000C88FB /* bayg29.opt.tour in Resources */,
 				49A3E8C21B57AF55000C88FB /* bays29.tsp in Resources */,
 				49A3E8BD1B57AEFB000C88FB /* a280.opt.tour in Resources */,
+				49DBEDA11B57DB4300046B67 /* tsp225.opt.tour in Resources */,
 				49A3E8C61B57AFB9000C88FB /* burma14.opt.tour in Resources */,
 				49A3E8B51B57A006000C88FB /* eil51.opt.tour in Resources */,
 				49A3E8B21B579578000C88FB /* bayg29.tsp in Resources */,
@@ -289,6 +296,7 @@
 				49A3E8BE1B57AEFB000C88FB /* a280.tsp in Resources */,
 				49BAA9781B159EE1006B9368 /* LaunchScreen.xib in Resources */,
 				49BAA9751B159EE1006B9368 /* Images.xcassets in Resources */,
+				49DBEDA21B57DB4300046B67 /* tsp225.tsp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TSPSolver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -454,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TSPSolver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

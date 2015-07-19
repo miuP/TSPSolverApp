@@ -12,13 +12,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
     var visualizer: TSPVisualizer?
-    var tsp: TSP = TSP(fileName: "bayg29")
+    var tsp: TSP = TSP(numOfCities: 250)
     var solverType: TSPSolver.TSPSolverType = .DynamicProgramming
 
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var solverTypeLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
 
-    let tspTitles = ["bayg29", "eil51", "a280", "bays29", "burma14"]
+    let tspTitles = ["bayg29", "eil51", "a280", "bays29", "burma14", "tsp225"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +43,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 answer = AntColonyOptimization(tsp: tsp).solve()
         }
         visualizer?.drawAnser(answer, withTSP: tsp)
-        println(answer.distance)
-        println(tsp.answer.distance)
-        println((answer.distance/tsp.answer.distance - 1) * 100 )
+        let error = (answer.distance/tsp.answer.distance - 1) * 100
+        if error >= 0 && error < 10000 { errorLabel.text = "\(error)%" }
 
     }
 
@@ -87,6 +87,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tsp = TSP(fileName: tspTitles[indexPath.row])
+        visualizer?.clearAnswer()
         visualizer?.drawNodesByTSP(tsp)
     }
 

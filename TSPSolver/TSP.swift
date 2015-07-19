@@ -47,6 +47,21 @@ class TSP {
         answer = Answer(route: correctAnswer, distance: TSPSolver(tsp: self).getDistanceByRoute(correctAnswer))
     }
 
+    init(numOfCities: Int) {
+        self.cities = TSP.makeRandomCities(numOfCities)
+        self.correctAnswer = []
+        self.answer = Answer(route: [], distance: 0.0)
+    }
+
+    private class func makeRandomCities(numOfCities: Int) -> [Node] {
+        var randomCities: [Node] = []
+        for (var i = 1; i <= numOfCities; i++) {
+            let aNode = Node(coordinates: Point(x: Double(arc4random()%500), y: Double(arc4random()%500)), number: i)
+            randomCities.append(aNode)
+        }
+        return randomCities
+    }
+
     class func makeCorrectAnswer(textData: String?) -> [Int] {
         let datas = textData.map { split($0) { contains("\n", $0) } }
         var correctAnswer: [Int] = []

@@ -50,7 +50,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qie-yg-Rxv">
-                                        <rect key="frame" x="40" y="549" width="171" height="38"/>
+                                        <rect key="frame" x="40" y="503" width="171" height="38"/>
                                         <color key="backgroundColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Select Solver">
@@ -61,6 +61,12 @@
                                             <action selector="selectSolverButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhV-fS-hsh"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNC-3o-CIL">
+                                        <rect key="frame" x="8" y="587" width="234" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -69,6 +75,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="errorLabel" destination="QNC-3o-CIL" id="uif-Ry-rYr"/>
                         <outlet property="mainView" destination="DTB-Xh-ohU" id="GRD-Xb-21f"/>
                         <outlet property="solverTypeLabel" destination="KtW-7B-odI" id="p4f-DE-8aI"/>
                     </connections>

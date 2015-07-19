@@ -26,13 +26,12 @@ class DynamicProgramming: TSPSolver {
 
 
     override func solve() -> Answer {
-
         let n = tsp.cities.count
         let size = n
         let SMAX = 1 << size
         var f: [[(Double, Int)]] = Array(count: SMAX, repeatedValue: Array(count: size, repeatedValue: (9999.0, 0)))
 
-        for (var i = 1; i < size; i++) {f[(1 << size) - 1][i] = (adjacencyMat[i - 1][0], 0)}
+        for (var i = 1; i < size; i++) {f[(1 << size) - 1][i] = (adjacencyMat[i][0], 0)}
 
         for (var v = SMAX - 2; v != 0; v--) {
             var tmp: [(Double, Int)] = Array(count: size, repeatedValue: (9999.0, 0))
@@ -59,9 +58,7 @@ class DynamicProgramming: TSPSolver {
             }
         }
 
-
         let route = getRoute(f, size: size, start: s)
-        println(route)
         return Answer(route: getRoute(f, size: size, start: s), distance: getDistanceByRoute(route))
     }
 

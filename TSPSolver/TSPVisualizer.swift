@@ -129,6 +129,10 @@ class TSPVisualizer {
         UIGraphicsEndImageContext()
     }
 
+    func clearAnswer() {
+        self.tspView.tourImageView.image = UIImage()
+    }
+
 
 
 }
